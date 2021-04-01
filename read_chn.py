@@ -68,7 +68,8 @@ class gamma_data:
         self.en_quad = struct.unpack('f', self.infile.read(4))[0]
         self.infile.close()
     def write_txt(self, fname):
-        tf = open(filename[:-4]+'.txt','w')
+        #tf = open(filename[:-4]+'.txt','w')
+        tf = open(fname+'.txt','w')
         tf.writelines(['# Filename : ' + fname, 
                        '\n# Version: ' + str(self.version),
                        '\n# MCA detector ID: ' + str(self.mca_detector_id),
